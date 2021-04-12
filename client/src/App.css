@@ -1,0 +1,96 @@
+
+  
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+tr,th,td,table{
+  text-align: center;
+  border: 1px solid black;
+  border: double;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* margin-left: 350px; */
+}
+
+img{
+  height: 230px;
+  width: 230px;
+  padding-bottom: 10px;
+  
+}
+
+.hw{
+  /* text-align: center; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.hback{
+  background-image: linear-gradient(to left, rgba(145, 255, 0, 0.158), rgb(238, 255, 0)) !important;
+  display: flex;
+  justify-content: space-between; 
+  justify-items: center;
+
+}
+
+.foot{
+  background-image: linear-gradient(to right, rgba(145, 255, 0, 0.158), rgb(238, 255, 0)) !important;
+  height: 60px;
+}
+.flip-card {
+  background-color: transparent;
+  width: 275px;
+  height: 225px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; 
+  box-shadow: 5px 8px 20px white ;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  /* background-color: lightslategrey; */
+  color: black;
+  transform: rotateY(180deg);
+}
